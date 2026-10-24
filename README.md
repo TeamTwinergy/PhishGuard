@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="frontend/public/logo.png" alt="PhishGuard Logo" width="360">
+  <img src="frontend/public/logo.jpg" alt="PhishGuard Logo" width="360">
 </p>
 
 <h1 align="center">🛡️ PhishGuard</h1>
