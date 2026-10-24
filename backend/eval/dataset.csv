@@ -1,0 +1,47 @@
+label,url,note
+benign,https://www.google.com/,well-known site
+benign,https://accounts.google.com/signin/v2/identifier,official login page (keyword edge case)
+benign,https://github.com/anthropics/anthropic-sdk-python,code host
+benign,https://en.wikipedia.org/wiki/Phishing,encyclopedia
+benign,https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%B2%E0%A6%95%E0%A6%BE%E0%A6%A4%E0%A6%BE,percent-encoded Bengali path
+benign,https://www.amazon.in/dp/B0EXAMPLE,official regional domain
+benign,https://docs.python.org/3/library/urllib.parse.html,documentation
+benign,https://mail.google.com/mail/u/0/#inbox,official subdomain
+benign,https://www.paypal.com/signin,official brand login
+benign,https://login.microsoftonline.com/common/oauth2/authorize?client_id=abc&response_type=code,official login with parameters
+benign,https://news.ycombinator.com/item?id=12345,forum
+benign,https://www.example.com/,reserved example domain
+benign,http://www.example.com/,HTTP-only edge case
+benign,https://example.com:8443/admin,common alternate port
+benign,https://stackoverflow.com/questions/12345/how-to-parse-urls,q&a
+benign,https://www.bbc.co.uk/news,multi-label suffix
+benign,https://bücher.example/,internationalized domain (benign)
+benign,https://xn--bcher-kva.example/,punycode form of benign IDN
+benign,https://www.sbi.co.in/web/personal-banking,official bank domain
+benign,https://support.apple.com/en-in/HT201994,official support
+benign,https://www.facebook.com/login/,official login (keyword edge case)
+benign,https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUvWxYz/view?usp=sharing,long document id
+benign,http://192.168.1.1/admin,home router admin page (IP edge case)
+benign,https://www.linkedin.com/in/someone/,profile page
+suspicious,http://paypal.com@203.0.113.7/login,at-sign trick with IP
+suspicious,https://paypa1-secure-login.example.net/verify,homoglyph brand
+suspicious,https://paypal.com.account-verify.example.net/,official domain embedded
+suspicious,https://paypal-login.example.org/,brand in unofficial domain
+suspicious,https://gooogle.example/,typosquat
+suspicious,https://rnicrosoft.example/account/verify,rn-for-m homoglyph
+suspicious,https://аpple.example/signin,Cyrillic a lookalike
+suspicious,http://2130706433/login,decimal-encoded IP
+suspicious,http://203.0.113.7/secure/login,raw IP login
+suspicious,https://files.example/invoice.pdf.exe,double extension
+suspicious,https://amazon.account-update.example.com/signin,brand as subdomain
+suspicious,https://netflix-billing-update.example.org/,brand token in domain
+suspicious,https://secure-login.verify.account.example.test/,keyword-only structure (expected weak)
+suspicious,https://update-your-password.example.net/,keyword-only (expected weak)
+suspicious,http://login.example.test:8081/verify,http + odd port + keywords
+suspicious,https://bit.ly/secure-login,shortener with keywords
+suspicious,https://hdfcbank-netbanking.example.com/login,brand token in domain
+suspicious,https://icloud-support.example.org/unlock,brand token in domain
+suspicious,https://dropbox.com.share-files.example.net/,official domain embedded
+suspicious,http://xn--pple-43d.example/,punycode homograph of apple
+suspicious,https://github.com@evil.example/login,at-sign trick
+suspicious,https://login.example.test/%70%61%79%70%61%6c,letters hidden with encoding
